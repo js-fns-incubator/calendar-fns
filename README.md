@@ -1,6 +1,6 @@
-# date-fns
+# calendar-fns
 
-Date helpers in function-per-file style.
+Calendar helpers in function-per-file style.
 
 ## API
 
