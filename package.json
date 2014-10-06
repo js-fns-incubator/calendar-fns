@@ -1,9 +1,9 @@
 {
-  "name": "calendar-utils",
+  "name": "calendar-fns",
   "version": "0.1.0",
   "author": "Sasha Koss <kossnocorp@gmail.com>",
-  "description": "Calendar data generator",
-  "repository": "https://github.com/kossnocorp/calendar-data",
+  "description": "Calendar data helpers",
+  "repository": "https://github.com/kossnocorp/calendar-fns",
   "engine": {
     "node": ">= 0.11"
   },
