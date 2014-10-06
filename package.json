@@ -7,7 +7,9 @@
   "engine": {
     "node": ">= 0.11"
   },
-  "dependencies": {},
+  "dependencies": {
+    "date-fns": "^0.3.0"
+  },
   "devDependencies": {
     "chai-shallow-deep-equal": "0.0.3",
     "karma-chai-sinon": "^0.1.3",
