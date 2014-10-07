@@ -8,10 +8,10 @@
     "node": ">= 0.11"
   },
   "dependencies": {
-    "date-fns": "^0.3.0"
+    "date-fns": "^0.4.0"
   },
   "devDependencies": {
-    "chai-shallow-deep-equal": "0.0.3",
+    "chai-shallow-deep-equal": "git://github.com/kossnocorp/chai-shallow-deep-equal.git#5115cd602e",
     "karma-chai-sinon": "^0.1.3",
     "karma-mocha": "^0.1.9",
     "karma-phantomjs-launcher": "^0.1.4",
