@@ -6,6 +6,7 @@ Calendar helpers in function-per-file style.
 
 Code is fully documented, checkout source for reference.
 
-* [`dayObj`](./src/day_obj.js)
-* [`weekObj`](./src/week_obj.js)
+* [`dayData`](./src/day_data.js)
+* [`weekData`](./src/week_data.js)
+* [`monthData`](./src/week_data.js)
 

@@ -1,13 +1,13 @@
-var monthObj = require('../month_obj');
+var monthData = require('../month_data');
 
-describe('monthObj', function() {
+describe('monthData', function() {
   beforeEach(function() {
     this.clock = sinon.useFakeTimers(new Date(2014, 9, 25).getTime());
   });
 
   it('returns month object for given date', function() {
     var date = new Date(2014, 8 /* Sep */, 1);
-    var result = monthObj(date);
+    var result = monthData(date);
     expect(result).to.shallowDeepEqual([
       [
         {
@@ -76,7 +76,7 @@ describe('monthObj', function() {
 
   it('allows to pass first day of week', function() {
     var date = new Date(2014, 8 /* Sep */, 1);
-    var result = monthObj(date, 1);
+    var result = monthData(date, 1);
     expect(result).to.shallowDeepEqual([
       [
         {

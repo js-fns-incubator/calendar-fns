@@ -1,6 +1,6 @@
-var weekObj = require('../week_obj');
+var weekData = require('../week_data');
 
-describe('weekObj', function() {
+describe('weekData', function() {
   beforeEach(function() {
     this.clock = sinon.useFakeTimers(
       new Date(2014, 9, 25).getTime()
@@ -13,7 +13,7 @@ describe('weekObj', function() {
 
   it('returns week object for given date', function() {
     var date = new Date(2014, 8 /* Sep */, 2);
-    var result = weekObj(date);
+    var result = weekData(date);
     expect(result).to.shallowDeepEqual([
       {
         date: new Date(2014, 7 /* Aug */, 31),
@@ -36,7 +36,7 @@ describe('weekObj', function() {
 
   it('allows to specify start of week', function() {
     var date = new Date(2014, 8 /* Sep */, 2);
-    var result = weekObj(date, 1);
+    var result = weekData(date, 1);
     expect(result).to.shallowDeepEqual([
       {
         date: new Date(2014, 8 /* Sep */, 1),

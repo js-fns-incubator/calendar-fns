@@ -8,7 +8,7 @@ var isLastDayOfMonth = require('date-fns/src/is_last_day_of_month');
  * @param {date|string} dirtyDate
  * @returns {object}
  */
-var dayObj = function(dirtyDate) {
+var dayData = function(dirtyDate) {
   var date = startOfDay(dirtyDate);
 
   return {
@@ -20,5 +20,5 @@ var dayObj = function(dirtyDate) {
   }
 };
 
-module.exports = dayObj;
+module.exports = dayData;
 

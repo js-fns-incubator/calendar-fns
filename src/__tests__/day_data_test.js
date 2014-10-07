@@ -1,6 +1,6 @@
-var dayObj = require('../day_obj');
+var dayData = require('../day_data');
 
-describe('dayObj', function() {
+describe('dayData', function() {
   beforeEach(function() {
     this.clock = sinon.useFakeTimers(
       new Date(2014, 8 /* starts from 0 */, 25).getTime()
@@ -13,7 +13,7 @@ describe('dayObj', function() {
 
   it('returns day object for given date', function() {
     var date = new Date('2014-09-02');
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 2),
       isToday: false,
@@ -25,7 +25,7 @@ describe('dayObj', function() {
 
   it('trims time', function() {
     var date = new Date('2014-09-02T11:55:00');
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 2),
       isToday: false,
@@ -37,7 +37,7 @@ describe('dayObj', function() {
 
   it('trims time', function() {
     var date = new Date('2014-09-02T11:55:00');
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 2),
       isToday: false,
@@ -49,7 +49,7 @@ describe('dayObj', function() {
 
   it('accepts string', function() {
     var date = '2014-09-02';
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 2),
       isToday: false,
@@ -61,7 +61,7 @@ describe('dayObj', function() {
 
   it('calculates isToday', function() {
     var date = new Date(2014, 8 /* starts from 0 */, 25);
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 25),
       isToday: true,
@@ -73,7 +73,7 @@ describe('dayObj', function() {
 
   it('calculates isWeekend', function() {
     var date = new Date(2014, 8 /* starts from 0 */, 28);
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 28),
       isToday: false,
@@ -85,7 +85,7 @@ describe('dayObj', function() {
 
   it('calculates isFirstDayOfMonth', function() {
     var date = new Date(2014, 8 /* starts from 0 */, 1);
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 1),
       isToday: false,
@@ -97,7 +97,7 @@ describe('dayObj', function() {
 
   it('calculates isLastDayOfMonth', function() {
     var date = new Date(2014, 8 /* starts from 0 */, 30);
-    var result = dayObj(date);
+    var result = dayData(date);
     expect(result).to.be.eql({
       date: new Date(2014, 8 /* starts from 0 */, 30),
       isToday: false,

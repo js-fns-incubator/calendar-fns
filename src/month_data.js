@@ -3,7 +3,7 @@ var startOfMonth = require('date-fns/src/start_of_month');
 var endOfWeek = require('date-fns/src/end_of_week');
 var addDays = require('date-fns/src/add_days');
 var eachDay = require('date-fns/src/each_day');
-var weekObj = require('./week_obj');
+var weekData = require('./week_data');
 var isSameMonth = require('date-fns/src/is_same_month');
 
 var NUMBER_OF_WEEKS = 6;
@@ -13,26 +13,26 @@ var NUMBER_OF_WEEKS = 6;
  * @param {number} [weekStartsAt=0]
  * @returns {Object}
  */
-var monthObj = function(dirtyDate, weekStartsAt) {
+var monthData = function(dirtyDate, weekStartsAt) {
   var date = new Date(dirtyDate);
   var startDate = startOfWeek(startOfMonth(date), weekStartsAt);
-  var monthData = [];
-  var weekIndex, weekData, startOfWeekDate;
+  var month = [];
+  var weekIndex, week, startOfWeekDate;
 
   for (weekIndex = 0; weekIndex < NUMBER_OF_WEEKS; weekIndex++) {
     startOfWeekDate = addDays(startDate, weekIndex * 7);
-    weekData = weekObj(startOfWeekDate, weekStartsAt).map(
+    week = weekData(startOfWeekDate, weekStartsAt).map(
       function(dayData) {
         dayData.isDummy = !isSameMonth(date, dayData.date);
         return dayData;
       }
     );
 
-    monthData.push(weekData);
+    month.push(week);
   }
 
-  return monthData;
+  return month;
 };
 
-module.exports = monthObj;
+module.exports = monthData;
 
