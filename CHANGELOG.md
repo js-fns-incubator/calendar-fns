@@ -1,6 +1,9 @@
 # Changelog
 
-## v0.1.0 (unreleased)
+## v0.1.0 (7 Oct 2014)
 
 * Additions:
-  - `dayObj`
+  - `dayData`
+  - `weekData`
+  - `monthData`
+
