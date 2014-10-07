@@ -1,9 +1,8 @@
 var startOfDay = require('date-fns/src/start_of_day');
-var endOfDay = require('date-fns/src/end_of_day');
 var isToday = require('date-fns/src/is_today');
 var isWeekend = require('date-fns/src/is_weekend');
-var startOfMonth = require('date-fns/src/start_of_month');
-var endOfMonth = require('date-fns/src/end_of_month');
+var isFirstDayOfMonth = require('date-fns/src/is_first_day_of_month');
+var isLastDayOfMonth = require('date-fns/src/is_last_day_of_month');
 
 /**
  * @param {date|string} dirtyDate
@@ -16,8 +15,8 @@ var dayObj = function(dirtyDate) {
     date: date,
     isToday: isToday(date),
     isWeekend: isWeekend(date),
-    isFirstDayOfMonth: date.getTime() == startOfMonth(date).getTime(),
-    isLastDayOfMonth: endOfDay(date).getTime() == endOfMonth(date).getTime()
+    isFirstDayOfMonth: isFirstDayOfMonth(date),
+    isLastDayOfMonth: isLastDayOfMonth(date)
   }
 };
 
