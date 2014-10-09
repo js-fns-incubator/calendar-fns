@@ -1,4 +1,6 @@
 # calendar-fns
+[![Build Status](https://travis-ci.org/kossnocorp/calendar-fns.svg)](https://travis-ci.org/kossnocorp/calendar-fns)
+
 
 Calendar helpers in function-per-file style.
 
