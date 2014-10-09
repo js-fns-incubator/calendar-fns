@@ -1,4 +1,5 @@
 # calendar-fns
+[![](http://img.shields.io/npm/v/calendar-fns.svg)](https://www.npmjs.org/package/calendar-fns)
 [![Build Status](https://travis-ci.org/kossnocorp/calendar-fns.svg)](https://travis-ci.org/kossnocorp/calendar-fns)
 
 
