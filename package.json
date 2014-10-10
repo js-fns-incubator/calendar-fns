@@ -1,6 +1,6 @@
 {
   "name": "calendar-fns",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Sasha Koss <kossnocorp@gmail.com>",
   "description": "Calendar data helpers",
   "repository": "https://github.com/kossnocorp/calendar-fns",
